@@ -9,9 +9,9 @@ MY_EMAIL="aaa@gmail.com"
 MY_PASSWORD="ghljmecjebesxukt"
 CSV_PATH="birthdays.csv"
 PLACEHOLDER="[NAME]"
-BALIM_HOLDER="zzz"
-KEDISIM_HOLDER="yyy"
-SEVGILIM_HOLDER="xxx"
+XXX="zzz"
+YYY="yyy"
+ZZZ="xxx"
 
 # 1. Update the birthdays.csv
 
@@ -30,7 +30,7 @@ month=now.month
 day=now.day
 
 for x in dictionary:
-    if x["name"]==BALIM_HOLDER and x["day"]==day and x["month"]==month:
+    if x["name"]==ZZZ and x["day"]==day and x["month"]==month:
         with open("letter_templates/letter_4.txt","r") as letter_file:
             letter_contents=letter_file.read().rstrip()
             new_letter=letter_contents.replace(PLACEHOLDER,x["name"])
@@ -45,7 +45,7 @@ for x in dictionary:
                     to_addrs=x["email"],
                     msg=(emailSubject+"\n\n"+emailContent).encode("utf-8")
                 )
-    elif x["name"]==KEDISIM_HOLDER and x["day"]==day and x["month"]==month:
+    elif x["name"]==YYY and x["day"]==day and x["month"]==month:
         with open("letter_templates/letter_5.txt") as letter_file:
             letter_contents=letter_file.read()
             new_letter=letter_contents.replace(PLACEHOLDER,x["name"])
@@ -62,7 +62,7 @@ for x in dictionary:
                     msg=(emailSubject+"\n\n"+emailContent).encode("utf-8")
                 )
 
-    elif x["name"]==SEVGILIM_HOLDER and x["day"]==day and x["month"]==month:
+    elif x["name"]==XXX and x["day"]==day and x["month"]==month:
         with open("letter_templates/letter_6.txt") as letter_file:
             letter_contents=letter_file.read()
             new_letter=letter_contents.replace(PLACEHOLDER,x["name"])
